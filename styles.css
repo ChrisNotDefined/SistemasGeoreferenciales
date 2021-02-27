@@ -11,5 +11,5 @@ a.item {
 
 a.item:hover{
   background-color: #efefefef;
-  padding-left: 2m;
+  padding-left: 1.5em;
 }
