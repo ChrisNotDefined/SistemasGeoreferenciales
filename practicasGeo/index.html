@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Práctica 1</title>
+</head>
+
+<body>
+
+  <!-- ===================================== NAVBAR ==================================================== -->
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Práctica 1</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#location">Ubicación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#details">Detalles</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- ================================ CARRUSEL ================================================= -->
+  <div class="shadow-lg">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="card carousel-item active">
+          <div class="overlay"></div>
+          <h2 class="slide-title text-light display-4">Aprende</h2>
+          <img src="developper.jpg" class="d-block w-100 banner-img" alt="Option 1">
+        </div>
+        <div class="carousel-item">
+          <div class="overlay"></div>
+          <h2 class="slide-title text-light display-4">Codifica</h2>
+          <img src="code.jpg" class="d-block w-100 banner-img" alt="Option 2">
+        </div>
+        <div class="carousel-item">
+          <div class="overlay"></div>
+          <h2 class="slide-title text-light display-4">Diseña</h2>
+          <img src="design.jpg" class="d-block w-100 banner-img" alt="Option 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ==================================== INTRO ====================================== -->
+
+  <div class="container-fluid py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Práctica 1</h1>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================== DETALLES ================================= -->
+  <div class="container-fluid bg-light py-5 shadow-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 pb-5">
+          <a name="services"></a>
+          <img src="developper.jpg" class="w-100 content-img rounded shadow" alt="Desarrollador1">
+          <h2 class="py-3">Aprende</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <span>Photo by <a
+              href="https://unsplash.com/@purzlbaum?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Claudio
+              Schwarz | @purzlbaum</a> on <a
+              href="https://unsplash.com/t/business-work?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </div>
+        <div class="col-12 col-md-4 pb-5">
+          <img src="code.jpg" class="w-100 content-img rounded shadow" alt="Desarrollador2">
+          <h2 class="py-3">Codifica</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <span>Photo by <a
+              href="https://unsplash.com/@florianolv?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Florian
+              Olivo</a> on <a
+              href="https://unsplash.com/s/photos/code?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </div>
+        <div class="col-12 col-md-4 pb-5">
+          <img src="design.jpg" class="w-100 content-img rounded shadow" alt="Desarrollador3">
+          <h2 class="py-3">Diseña</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <span>Photo by <a
+              href="https://unsplash.com/@qbraem?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Quinten
+              Braem</a> on <a
+              href="https://unsplash.com/s/photos/pm?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================= MAPA ========================================== -->
+
+  <div class="container-fluid py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <a name="location"></a>
+          <h2 class="text-center mb-3">MAPA DE UBICACIÓN</h2>
+          <div id="map" class="shadow-lg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== FOOTER ============================================ -->
+
+  <div class="container-fluid bg-dark py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-white">
+          <a name="details"></a>
+          <h3>Pie de página</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p>Desarrollado por: Christopher Álvarez Pichardo</p>
+          <div>Iconos diseñados por <a href="https://www.flaticon.es/autores/pixel-perfect" title="Pixel perfect">Pixel
+              perfect</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================= BACK TO TOP ========================================= -->
+  <button onclick="scrollToTop()" id="goToTop" class="btn btn-light floating round-button">
+    <a href="#"></a>
+    <img src="up.svg">
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+
+  <!-- Google Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlAfjkEyZc3T2vLRARL5f4QYJj3ZPai6Q&callback=iniciaMapa"
+    async defer></script>
+
+  <!-- Local Js code -->
+  <script src="scripts.js"></script>
+</body>
+
+</html>

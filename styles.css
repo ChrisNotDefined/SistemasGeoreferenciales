@@ -1,0 +1,15 @@
+body {
+  padding: 1em;
+}
+
+a.item {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+  transition: all 150ms;
+}
+
+a.item:hover{
+  background-color: #efefefef;
+  padding-left: 2m;
+}
