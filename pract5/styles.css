@@ -1,0 +1,41 @@
+body {
+  background: #efefef;
+}
+
+#mapa {
+  width: 100%;
+  height: calc(100vh - 10%);
+}
+
+.template {
+  display: none;
+}
+
+li {
+  transition: background 200ms;
+}
+
+li h4 {
+  margin-bottom: 0;
+}
+
+li.list-group-item:hover {
+  background-color: rgb(228, 248, 232);
+  cursor: pointer;
+}
+
+li h4::before{
+  content: "֎";
+  margin-right: 1em;
+}
+
+li.active.list-group-item {
+  background-color: green;
+  border: green;
+}
+
+@media (max-width: 992px) {
+  #mapa {
+    height: 600px;
+  }
+}
