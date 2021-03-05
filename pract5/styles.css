@@ -7,16 +7,21 @@ body {
   height: calc(100vh - 10%);
 }
 
-.template {
-  display: none;
+h2.title {
+  margin-bottom: 1em;
+  text-align: center;
 }
 
-li {
+li.list-group-item {
   transition: background 200ms;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 
-li h4 {
+li.list-group-item h4 {
   margin-bottom: 0;
+  width: auto;
 }
 
 li.list-group-item:hover {
@@ -24,14 +29,31 @@ li.list-group-item:hover {
   cursor: pointer;
 }
 
-li h4::before{
+li.list-group-item::before {
   content: "֎";
-  margin-right: 1em;
+  margin: calc((1.275rem + 0.3vw)*.2);
+  font-size: calc(1.275rem + 0.3vw);
+  transition: transform 800ms;
+}
+
+li.list-group-item.active::before {
+  transform: rotate(360deg);
 }
 
 li.active.list-group-item {
   background-color: green;
   border: green;
+}
+
+.infoImage {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 100%;
+  min-width: 300px;
+}
+
+.infoImage + h2 {
+  margin-top: 8px;
 }
 
 @media (max-width: 992px) {

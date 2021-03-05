@@ -11,6 +11,6 @@ const routes = [{
   name: 'Práctica 4 - Cargar mapa estático, (mapa como imágen)',
   route: "./pract4/index.html"
 }, {
-  name: 'Práctica 5 - Markers, InfoWindow, addListener',
+  name: 'Práctica 5 - Markers, InfoWindow, addListener()',
   route: "./pract5/index.html"
 }]

@@ -1,95 +1,113 @@
-const CaptionHTML = (title, content) => {
+// ------------- Template components ------------------------------------------------
+
+const CaptionHTML = (title, content, imageUrl) => {
   return `
+  ${imageUrl ? `<img class="infoImage" src="${imageUrl}" height="200px">` : '' }
   <h2>${title}</h2>
   <p>${content}</p>
 `
-}
+}// For each info window
 
-const listItem = (title, coords) => {
+const listItemHTML = (title, coords, index) => {
   return `
-  <li class="list-group-item list-group-item-action">
-    <a onclick="setCoords(${coords.lat}, ${coords.lng}, this)">
-      <h4>${title}</h4>
-    </a>
+  <li class="list-group-item list-group-item-action" onclick="setCoords(${coords.lat}, ${coords.lng}, this, ${index})">
+    <h4>${title}</h4>
   </li>
   `
-}
+} // Every item of the marker list
 
-const setCoords = (lat, lng, el) => {
+// ---- End of Template components ------------------------------------------------
+
+// Logic for each item in the list
+const setCoords = (lat, lng, el, indx) => {
   pointList.querySelectorAll("li").forEach(e => {
     e.classList.remove('active');
   })
-  el.parentNode.classList.add('active');
+  el.classList.add('active');
   map.panTo({
     lat,
     lng
   });
+
+  markers.forEach((m, ind) => {
+    if (ind - 1 === indx) {
+      m.show();
+    } else {
+      m.close();
+    }
+  })
+
+  // markers[indx + 1].show();
 }
 
-let pointList = document.getElementById('pointList');
+// --------------- Global Variables ----------------------------
+var pointList = document.getElementById('pointList');
+var mapa = document.getElementById("mapa");
 
-let mapa = document.getElementById("mapa");
 var map = null;
+var markers = [];
+// --------------- End of global variables ---------------------
 
+// --------------- Run when fully loaded -------------------------------
+window.onload = () => {
+  // --------- Create a marker and list item for each point in the datasource ---------------
+  Points.forEach((p, index) => {
+    markers.push(new MyMarker(map, p.lat, p.lng, p.titulo, p.description, p.imageUrl))
+    let coords = {};
+    coords.lat = p.lat;
+    coords.lng = p.lng;
+    // ------------------------------ Add its button to the list
+    pointList.innerHTML += listItemHTML(p.titulo, coords, index);
+  })
+
+  // ------------------- Show the markers one by one 
+  markers.forEach(m => {
+    setTimeout(() => {
+      m.loadMarker()
+    }, 500);
+  })
+};
+
+
+// ------- Called when map is loaded, before all document is ready --------------
 function iniciaMapa() {
+
   var propiedades = {
     center: {
       lat: 16.836784958620864,
       lng: -99.91
     },
-    zoom: 14
+    zoom: 13
   }
-
-
   map = new google.maps.Map(mapa, propiedades);
-  console.log(map);
 
+
+
+  // ------ Verify location compatibility -----------
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(pos => {
+
       let found_position = {
         lat: pos.coords.latitude,
         lng: pos.coords.longitude
       }
 
-      const marker = new google.maps.Marker({
-        position: found_position,
-        map,
-        title: "Marcador",
-      });
+      // ------- Load Marker with device position to the map ------------------------------
+      let geoloc_marker = new MyMarker(map,
+        found_position.lat,
+        found_position.lng,
+        "Tu Ubicación",
+        "Ubicación aproximada", null, true
+      );
 
-      const infoWindow = new google.maps.InfoWindow({
-        content: CaptionHTML("Tu ubicación", "Tu ubicación puede no ser exacta")
-      })
+      geoloc_marker.loadMarker();
+      map.setCenter(found_position);
+      geoloc_marker.show(); // Default to be showing at start
 
-
-      pointList.innerHTML = listItem('Tu Ubicación', found_position) + pointList.innerHTML;
+      // ------ Add button to control the marker -------------------------------------------
+      pointList.innerHTML = listItemHTML("Tu Ubicación", found_position, -1) + pointList.innerHTML;
       pointList.querySelectorAll('li')[0].classList.add('active');
-
-      marker.addListener('click', () => {
-        infoWindow.open(map, marker);
-      })
-
-      infoWindow.open(map, marker);
-
-      window.onload = () => {
-        setTimeout(() => {
-          map.setCenter(found_position)
-        }, 50)
-      };
+      markers.push(geoloc_marker);
     });
-
-    let markers = [];
-
-    Points.forEach(p => {
-      markers.push(new MyMarker(map, p.lat, p.lng, p.titulo, p.description))
-      let coords = {};
-      coords.lat = p.lat;
-      coords.lng = p.lng;
-      pointList.innerHTML += listItem(p.titulo, coords);
-    })
-
-    markers.forEach(m => {
-      m.loadMarker();
-    })
   }
 }

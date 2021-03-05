@@ -1,5 +1,14 @@
+html {
+  background-image: url("https://wallpaperaccess.com/full/391977.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: center center;
+}
+
 body {
-  padding: 1em;
+  padding: 2em;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.616);
 }
 
 a.item {
@@ -9,7 +18,23 @@ a.item {
   transition: all 150ms;
 }
 
-a.item:hover{
+a i::before {
+  margin: 0 0.2em;
+  transition: all 150ms;
+}
+
+a:hover i::before {
+  color: #f3a506;
+  transform: rotate(90deg);
+}
+
+a.item:hover {
   background-color: #efefefef;
-  padding-left: 1.5em;
+  padding-left: 1.2em;
+}
+
+h6.credits {
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
 }
