@@ -13,4 +13,7 @@ const routes = [{
 }, {
   name: 'Práctica 5 - Markers, InfoWindow, addListener()',
   route: "./pract5/index.html"
+}, {
+  name: 'Práctica 6 - Marcador en movimiento',
+  route: "./pract6/index.html"
 }]
