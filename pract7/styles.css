@@ -1,0 +1,11 @@
+body {
+  padding: 1em;
+}
+
+.data-card {
+  border-radius: 10px;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  display: inline-block;
+}

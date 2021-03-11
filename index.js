@@ -16,4 +16,10 @@ const routes = [{
 }, {
   name: 'Práctica 6 - Marcador en movimiento',
   route: "./pract6/index.html"
-}]
+},{
+  name: 'Práctica 7 - Obtener datos de un JSON',
+  route: "./pract7/index.html"
+},{
+  name: 'Práctica 8 - Obtener paises con Coronavirus',
+  route: "./pract8/index.html"
+},]

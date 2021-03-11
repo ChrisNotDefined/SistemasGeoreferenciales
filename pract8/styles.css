@@ -1,0 +1,30 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding: 1em;
+}
+
+p {
+  margin: 10px;
+}
+
+.country-row {
+  margin: 1em auto;
+  font-size: 1.2em;
+  border-radius: 0.5em;
+  box-shadow: inset 0 3px 10px #00000044;
+  transition: all 200ms ease-in-out;
+}
+
+.country-row:hover {
+  padding: 0.5em 0;
+  background-color: #00000011;
+}
+
+#paises.container {
+  overflow-y: scroll;
+  height: 90%;
+}
