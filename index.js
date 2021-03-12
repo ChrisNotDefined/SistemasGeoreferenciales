@@ -22,4 +22,13 @@ const routes = [{
 },{
   name: 'Práctica 8 - Obtener paises con Coronavirus',
   route: "./pract8/index.html"
+},{
+  name: 'Práctica 9 - Mostrar pises en marcadores',
+  route: "./pract9/index.html"
+},{
+  name: 'Práctica 10 - Visualizar Coronavirus 2 APIs',
+  route: "./pract10/index.html"
+},{
+  name: 'Práctica 11 - Visualizar Coronavirus 1 API - Imágenes',
+  route: "./pract11/index.html"
 },]
