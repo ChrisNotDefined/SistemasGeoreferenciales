@@ -31,4 +31,13 @@ const routes = [{
 },{
   name: 'Práctica 11 - Visualizar Coronavirus 1 API - Imágenes',
   route: "./pract11/index.html"
-},]
+},
+{
+  name: 'Práctica 12 - Marker Clustering',
+  route: "./pract12/index.html"
+},
+{
+  name: 'Práctica 13 - Idomas y Regiones',
+  route: "./pract13/index.html"
+},
+]

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <title>Idiomas</title>
+</head>
+
+<body>
+  <form>
+
+    <div class="container_fluid">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-6">
+            <h1 class="text-center">Idiomas</h1>
+          </div>
+          <div class="col-6">
+            <select name="idioma" id="idioma" onChange="this.form.submit()" class="form-control">
+              <option value="es">Español</option>
+              <option value="en">Inglés</option>
+              <option value="it">Italiano</option>
+              <option value="zh">Chino</option>
+              <option value="ja">Japonés</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div id="map"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Google Maps -->
+    <!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlAfjkEyZc3T2vLRARL5f4QYJj3ZPai6Q&callback=iniciaMapa&region=JP&language=ja"
+      async defer></script> -->
+
+    <script src="script.js"></script>
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+  </form>
+</body>
+
+</html>
