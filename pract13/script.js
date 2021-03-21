@@ -5,12 +5,15 @@ var coords = {
 
 const queryString = window.location.search;
 
-console.log(queryString);
-
 const urlParams = new URLSearchParams(queryString);
 
-const idioma = urlParams.get('idioma');
-console.log(idioma);
+let idioma = urlParams.get('idioma');
+
+if(!idioma) {
+  idioma = 'es';
+  document.getElementById('idioma').value = idioma;
+  document.querySelector('#form').submit();
+}
 
 document.getElementById('idioma').value = idioma;
 var script = document.createElement('script');

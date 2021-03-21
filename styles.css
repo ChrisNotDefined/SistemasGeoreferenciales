@@ -6,8 +6,9 @@ html {
 }
 
 body {
+  flex-direction: column;
   padding: 2em;
-  min-height: 100vh;
+  height: 100vh;
   background: rgba(255, 255, 255, 0.616);
 }
 
@@ -37,4 +38,38 @@ h6.credits {
   position: absolute;
   bottom: 1em;
   right: 2em;
+}
+
+div.stacked {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+
+ul.scroll-list {
+  overflow-y: auto;
+  flex: 1;
+  margin-bottom: 2em;
+}
+
+/*  For Webkit Browsers (Chome, New Edge, Safari) */
+ul.scroll-list::-webkit-scrollbar {
+  width: 2ch; /* width of the entire scrollbar */
+}
+
+ul.scroll-list::-webkit-scrollbar-track {
+  background: #A9ABB0; /* color of the tracking area */
+}
+
+ul.scroll-list::-webkit-scrollbar-thumb {
+  background-color: #5C6C88; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #A9ABB0; /* creates padding around scroll thumb */
+}
+
+@media (max-width: 768px) {
+  h6.credits {
+    left: 2em;
+    bottom: 0.5rem;
+  }
 }

@@ -1,10 +1,69 @@
-html, body {
+html,
+body {
   margin: 0px;
   padding: 0px;
-  height: 100%;
+  height: 100vh;
+}
+html {
+  background-image: url("https://wallpaperaccess.com/full/391977.jpg") ;
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: center center;
+}
+
+body {
+  background: rgba(255, 255, 255, 0.616) !important;
 }
 
 #map {
   width: 100%;
-  height: 640px;
-} 
+  height: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.stretch {
+  flex: 1;
+}
+
+.button-bar {
+  border-radius: 20px;
+}
+
+
+.button-bar div {
+  padding: 0;
+  flex: 1;
+  transition: flex 200ms ease-out;
+}
+.button-bar div:hover {
+  flex: 1.61;
+}
+
+.button-bar button {
+  width: 100%;
+  border-radius: 0;
+}
+
+.button-bar button:focus {
+  box-shadow: none !important;
+  font-weight: bold;
+}
+
+.button-bar > :first-child > * {
+  border-radius: 1ch 0 0 1ch;
+}
+
+.button-bar > :last-child > * {
+  border-radius: 0 1ch 1ch 0;
+}
+
+
+@media (max-width: 400px) {
+  .button-bar .label {
+    display: none;
+  }  
+}
