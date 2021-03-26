@@ -12,26 +12,61 @@ body {
   background: rgba(255, 255, 255, 0.616);
 }
 
-a.item {
+ul {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+  padding: 1em;
+}
+
+li.item {
+  border-radius: 0.5em;
+  padding: 1em;
+  background-color: #fff;
   text-decoration: none;
   color: black;
-  font-size: 1.5em;
+  font-size: 1.2em;
   transition: all 150ms;
+  box-shadow: #0005 0 0.5em 1em;
+  
+}
+
+li.item a {
+  color:#5C6C88;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  outline: none;
+}
+
+li.item .title {
+  font-size: 1.2em;
+  color: #424d61;
+}
+
+li.item .subtitle {
+  font-weight: lighter;
+}
+
+a i{
+  align-self: center;
 }
 
 a i::before {
+  font-size: 3.2em;
   margin: 0 0.2em;
   transition: all 150ms;
 }
 
-a:hover i::before {
+li.item:hover i::before, li.item:focus-within i::before {
   color: #f3a506;
   transform: rotate(90deg);
 }
 
-a.item:hover {
-  background-color: #efefefef;
-  padding-left: 1.2em;
+li.item:hover, li.item:focus-within{
+  background-color: #efefef;
 }
 
 h6.credits {
@@ -46,30 +81,57 @@ div.stacked {
   max-height: 100%;
 }
 
-ul.scroll-list {
+.scroll-list {
   overflow-y: auto;
   flex: 1;
   margin-bottom: 2em;
 }
 
 /*  For Webkit Browsers (Chome, New Edge, Safari) */
-ul.scroll-list::-webkit-scrollbar {
-  width: 2ch; /* width of the entire scrollbar */
+.scroll-list::-webkit-scrollbar {
+  width: 1ch; /* width of the entire scrollbar */
 }
 
-ul.scroll-list::-webkit-scrollbar-track {
-  background: #A9ABB0; /* color of the tracking area */
+.scroll-list::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
 }
 
-ul.scroll-list::-webkit-scrollbar-thumb {
-  background-color: #5C6C88; /* color of the scroll thumb */
+.scroll-list::-webkit-scrollbar-thumb {
+  background-color: #5C6C88AA; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
-  border: 3px solid #A9ABB0; /* creates padding around scroll thumb */
+  border: 3px solid transparent; /* creates padding around scroll thumb */
+}
+
+@media (min-width: 1200px) {
+  ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 768px) {
   h6.credits {
     left: 2em;
     bottom: 0.5rem;
+  }
+
+  ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  h6.credits {
+    left: 2em;
+    bottom: 0.5rem;
+  }
+
+  ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .scroll-list {
+    margin-bottom: 3em;
   }
 }
