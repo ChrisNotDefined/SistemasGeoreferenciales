@@ -40,4 +40,7 @@ const routes = [{
 }, {
   name: 'Práctica 14 - Estilizando mapas',
   route: "./pract14/index.html"
-}, ]
+}, {
+  name: 'Práctica 15 - Mapas Simples con Google My Maps',
+  route: "https://www.google.com/maps/d/u/0/edit?mid=1BkZFg96bkPWjIXkn8juW5vFyZYkanS4J&usp=sharing"
+}];
