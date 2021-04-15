@@ -1,0 +1,104 @@
+* {
+  --mapheight: 70vh;
+}
+
+html {
+  background-image: url("https://wallpaperaccess.com/full/391977.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: center center;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: rgba(255, 255, 255, 0.616) !important;
+}
+
+[id^="map"] {
+  width: 100%;
+  height: var(--mapheight);
+}
+
+p {
+  text-align: center;
+  font-size: 2rem;
+}
+
+div.slides {
+  position: relative;
+  overflow: hidden;
+  height: calc(var(--mapheight) + 4em);
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.301) 0 5px 5px;
+  border-radius: 15px;
+}
+
+.slide-controls > button {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(128, 128, 128, 0.582);
+  color: white;
+  border: none;
+  width: 3em;
+  height: 3em;
+  border-radius: 3em;
+  transition: background 100ms;
+}
+
+.slide-controls > button.prev > * {
+  transform: translateX(-10%);
+}
+
+.slide-controls > button.next > * {
+  transform: translateX(10%);
+}
+
+.slide-controls > button:hover {
+  background-color: rgba(63, 63, 63, 0.452);
+}
+
+.slide-controls > button:active {
+  background-color: rgba(24, 24, 24, 0.452);
+}
+
+.slide-controls > button.prev {
+  top: 50%;
+  left: 1em;
+  transform: translate(0, -50%);
+}
+
+.slide-controls > button.next {
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 1em;
+}
+
+div.slides > .slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+div.slides > .slide.selected {
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+h1.title {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: wheat;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 0.5em;
+  border-radius: 0 0 0.2em 0.2em;
+  box-shadow: rgba(0, 0, 0, 0.301) 0 5px 5px;
+}
