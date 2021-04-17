@@ -64,4 +64,8 @@ const routes = [
     name: "Práctica 16 - Controles en los mapas",
     route: "./pract15/index.html",
   },
+  {
+    name: "Práctica 17 - Inspinia | Places",
+    route: "./pract16/index.html",
+  },
 ];
