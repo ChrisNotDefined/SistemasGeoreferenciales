@@ -68,4 +68,8 @@ const routes = [
     name: "Práctica 17 - Inspinia | Places",
     route: "./pract16/index.html",
   },
+  {
+    name: "Práctica 18 - Firebase y Firestore",
+    route: "./pract17/index.html",
+  },
 ];
