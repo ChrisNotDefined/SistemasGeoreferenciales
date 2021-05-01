@@ -24,8 +24,8 @@
     <!-- Local Styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="container-fluid bg-light py-5">
+  <body class="bg-light">
+    <div class="container-fluid py-5">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -34,7 +34,7 @@
         </div>
         <form id="forma">
           <div class="row">
-            <div class="col-12 col-md-4 py-2">
+            <div class="col-12 col-md-6 py-2">
               <input
                 type="text"
                 name="nombre"
@@ -43,7 +43,7 @@
                 placeholder="Nombre"
               />
             </div>
-            <div class="col-12 col-md-4 py-2">
+            <div class="col-12 col-md-6 py-2">
               <input
                 type="number"
                 step="any"
@@ -53,20 +53,20 @@
                 placeholder="Código"
               />
             </div>
-            <div class="col-12 col-md-4 py-2">
-              <button type="submit" class="btn btn-primary">Agregar</button>
+            <div class="col-12 py-2">
+              <button type="submit" class="btn btn-primary w-100">
+                Agregar
+              </button>
             </div>
           </div>
         </form>
       </div>
     </div>
-    <div class="container-fluid bg-light py-5">
+    <div class="container-fluid bg-light py-5 pt-0">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-8 p-2">
-            <ul id="lista" class="list-group">
-              
-            </ul>
+          <div class="col-12">
+            <ul id="lista" class="list-group"></ul>
           </div>
         </div>
       </div>

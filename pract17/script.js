@@ -18,20 +18,23 @@ const formulario = document.querySelector("#forma");
 
 const renderProductos = (doc) => {
   let li = document.createElement("li");
-  let nombre = document.createElement("span");
-  let codigo = document.createElement("span");
+  let nombre = document.createElement("div");
+  let codigo = document.createElement("div");
   let borrar = document.createElement("button");
 
-  borrar.className = "btn btn-danger m-3";
+  li.className = "p-3"
+  nombre.className = "itemName"
+  codigo.className = "itemCode";
+  borrar.className = "btn btn-danger mt-3";
 
   nombre.textContent = doc.data().nombre + " ";
   codigo.textContent = doc.data().codigo + " ";
   borrar.textContent = "Borrar";
 
   li.setAttribute("id", doc.id);
-  li.appendChild(borrar);
   li.appendChild(nombre);
   li.appendChild(codigo);
+  li.appendChild(borrar);
 
   prodList.appendChild(li);
 
