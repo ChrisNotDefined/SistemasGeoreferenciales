@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Optimizado</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.svg"
+      type="image/x-icon"
+    />
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/4dc0c0b0ca.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-light">
+    <div class="container-fluid py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>Lista de productos</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="container d-flex justify-content-end">
+          <button type="button" class="btn btn-success mr-0" id="btnNew">
+            <i class="fas fa-plus"></i>
+            <span>Agregar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-light py-5 pt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 p-2">
+            <ul id="lista" class="list-group"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="indication">Editar</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="productForm">
+              <p>Nombre:</p>
+              <input id="formNombre" class="form-control" />
+              <div style="height: 1em"></div>
+              <p>Código:</p>
+              <input id="formCodigo" type="number" class="form-control" />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" id="formProceed" class="btn btn-primary">
+              Añadir
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+
+    <!-- Bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Local Scripts -->
+    <script src="./js/firebaseConf.js"></script>
+    <script src="./js/register.js"></script>
+    <script src="./js/modalForm.js"></script>
+    <script src="./js/registerComponent.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

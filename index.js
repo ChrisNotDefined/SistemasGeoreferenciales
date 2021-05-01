@@ -72,4 +72,8 @@ const routes = [
     name: "Práctica 18 - Firebase y Firestore",
     route: "./pract17/index.html",
   },
+  {
+    name: "Práctica 19 - Firebase optimizado",
+    route: "./pract18/index.html",
+  },
 ];

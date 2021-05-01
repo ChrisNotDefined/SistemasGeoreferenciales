@@ -1,0 +1,27 @@
+html,
+body {
+  min-height: 100%;
+}
+
+li {
+  background-color: hsl(120, 59%, 90%);
+  transition: background-color 500ms;
+  border-radius: 10px;
+}
+
+li:hover {
+  background-color: hsl(120, 50%, 79%);
+
+}
+
+li:not(:first-child) {
+  margin-top: 10px;
+}
+
+button i {
+  transition: transform cubic-bezier(0.06, 1.24, 0.21, 1.39) 200ms;
+}
+
+button:hover i {
+  transform: rotate(360deg);
+}
