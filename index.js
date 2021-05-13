@@ -76,4 +76,8 @@ const routes = [
     name: "Práctica 19 - Firebase optimizado",
     route: "./pract18/index.html",
   },
+  {
+    name: "Práctica 20 - Figuras y trazos",
+    route: "./pract19/index.html",
+  },
 ];
