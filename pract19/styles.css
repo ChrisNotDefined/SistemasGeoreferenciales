@@ -60,6 +60,14 @@ table {
   border-right: solid 1px;
 }
 
+.title {
+  color: #9685ff;
+  text-align: center;
+  text-shadow: #9685ffee 0 0 0.5em;
+  padding: 1rem 0;
+  border-bottom: solid 2px;
+}
+
 td.number {
   text-align: right;
 }
