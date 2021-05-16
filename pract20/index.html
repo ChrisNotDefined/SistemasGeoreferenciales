@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fast Rabbit</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.svg"
+      type="image/x-icon"
+    />
+
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand align-items-center" href="#">
+          <img class="navbar-image" src="./img/conejo.svg" />
+          Fast Rabbit
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#accountModal"
+                >Mi Cuenta</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="btnLogout">Salir</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+                >Ingresar</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+                >Registro</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal Login -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <label class="form-label" for="email">Correo electrónico: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="email"
+                type="email"
+                id="txtCorreo"
+                placeholder="michael@email.com"
+              />
+              <label class="form-label" for="email">Contraseña: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="password"
+                type="password"
+                id="txtPassword"
+                placeholder="Ingresa tu contraseña"
+              />
+              <button class="btn btn-primary w-100">Iniciar Sesión</button>
+              <p class="error"></p>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Register -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Registrarse</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="registerForm">
+              <label class="form-label" for="email">Correo electrónico: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="email"
+                type="email"
+                id="txtRCorreo"
+                placeholder="michael@email.com"
+              />
+              <label class="form-label" for="email">Contraseña: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="password"
+                type="password"
+                id="txtRPassword"
+                placeholder="Ingresa tu contraseña"
+              />
+              <label class="form-label" for="email">Repetir contraseña: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="password"
+                type="password"
+                id="txtRRepeatPassword"
+                placeholder="Ingresa tu contraseña"
+              />
+              <button class="btn btn-primary w-100">Registrarse</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Account -->
+    <div
+      class="modal fade"
+      id="accountModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Registrarse</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Info de la cuenta</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row" id="dishesList">
+        <div class="col-12 col-md-4 mb-2">
+          <div class="card">
+            <img src="https://cdn.kiwilimon.com/recetaimagen/32018/36915.jpg" />
+            <h4>Pasta Rica</h4>
+            <p>$300.00 pesos</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 mb-2">
+          <div class="card">
+            <img src="https://cdn.kiwilimon.com/recetaimagen/32018/36915.jpg" />
+            <h4>Pasta Rica</h4>
+            <p>$300.00 pesos</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 mb-2">
+          <div class="card">
+            <img src="https://cdn.kiwilimon.com/recetaimagen/32018/36915.jpg" />
+            <h4>Pasta Rica</h4>
+            <p>$300.00 pesos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+    <script src="js/firebaseConfig.js"></script>
+
+    <!-- Local Script -->
+    <script src="js/authentication.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
