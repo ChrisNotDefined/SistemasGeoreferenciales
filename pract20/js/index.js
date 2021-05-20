@@ -9,6 +9,7 @@ const configMenu = (user) => {
       .doc(user.uid)
       .get()
       .then((doc) => {
+        if (!doc.data()) return;
         const html = `
         <p>Nombre:  ${doc.data().nombre}</p>
         <p>Correo:  ${user.email}</p>
@@ -51,7 +52,8 @@ const getDishes = (data) => {
     });
 
     listaPlatillos.innerHTML = html;
-  } else{
-    listaPlatillos.innerHTML = '<p>Ingrese a su cuenta para ver los platittlos disponibles</p>';
+  } else {
+    listaPlatillos.innerHTML =
+      "<p>Ingrese a su cuenta para ver los platittlos disponibles</p>";
   }
 };
