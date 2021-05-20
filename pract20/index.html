@@ -44,7 +44,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <li class="nav-item logged-in">
               <a
                 class="nav-link"
                 href="#"
@@ -55,9 +55,9 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="btnLogout">Salir</a>
+              <a class="nav-link logged-in" id="btnLogout">Salir</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item logged-out">
               <a
                 class="nav-link"
                 data-bs-toggle="modal"
@@ -65,7 +65,7 @@
                 >Ingresar</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item logged-out">
               <a
                 class="nav-link"
                 data-bs-toggle="modal"
@@ -120,6 +120,7 @@
               <button class="btn btn-primary w-100">Iniciar Sesión</button>
               <p class="error"></p>
             </form>
+            <button class="btn btn-success w-100" onclick="loginGoogle()">Entrar Con Google</button>
           </div>
           <div class="modal-footer">
             <button
@@ -155,6 +156,24 @@
           </div>
           <div class="modal-body">
             <form id="registerForm">
+              <label class="form-label" for="email">Nombre: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="name"
+                type="text"
+                id="txtRName"
+                placeholder="Michael Jordan"
+              />
+              <label class="form-label" for="email">Teléfono: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="name"
+                type="tel"
+                id="txtRTel"
+                placeholder="477 123 4565"
+              />
               <label class="form-label" for="email">Correo electrónico: </label>
               <input
                 required
@@ -182,7 +201,17 @@
                 id="txtRRepeatPassword"
                 placeholder="Ingresa tu contraseña"
               />
+              <label class="form-label" for="dir">Dirección: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="dir"
+                type="text"
+                id="txtRDir"
+                placeholder="Av. Calle 123 Col Colonia Ciudad Pais"
+              />
               <button class="btn btn-primary w-100">Registrarse</button>
+              <p class="error"></p>
             </form>
           </div>
           <div class="modal-footer">
@@ -217,7 +246,7 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">Info de la cuenta</div>
+          <div class="modal-body account-data">Info de la cuenta</div>
           <div class="modal-footer">
             <button
               type="button"
@@ -233,7 +262,7 @@
 
     <div class="container p-5">
       <div class="row" id="dishesList">
-        <div class="col-12 col-md-4 mb-2">
+        <!-- <div class="col-12 col-md-4 mb-2">
           <div class="card">
             <img src="https://cdn.kiwilimon.com/recetaimagen/32018/36915.jpg" />
             <h4>Pasta Rica</h4>
@@ -253,7 +282,7 @@
             <h4>Pasta Rica</h4>
             <p>$300.00 pesos</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 

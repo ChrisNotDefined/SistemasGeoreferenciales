@@ -14,6 +14,8 @@ body {
 
 .container img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 1em;
 }
 
@@ -23,6 +25,22 @@ body {
   border-color: var(--light);
   border-radius: 0.5em;
   box-shadow: #0008 0 0 10px;
+}
+
+.card button {
+  background-color: chocolate;
+  border-color: chocolate;
+  color: white
+}
+
+.card button:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.25rem #ffd90070;
+  color: gold;
+}
+
+.card button:focus {
+  box-shadow: 0 0 0 0.25rem #ffd90070;
 }
 
 .card p {
@@ -47,4 +65,4 @@ nav.navbar {
 
 .navbar-image {
   height: 50px;
-} 
+}
