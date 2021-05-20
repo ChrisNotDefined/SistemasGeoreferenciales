@@ -109,6 +109,7 @@ registerForm.addEventListener("submit", (e) => {
 
 const loginGoogle = () => {
   const accountData = document.querySelector(".account-data");
+  console.log(accountData);
   var provider = new firebase.auth.GoogleAuthProvider();
   auth
     .signInWithPopup(provider)
@@ -116,7 +117,7 @@ const loginGoogle = () => {
       var token = res.credential.accessToken;
       console.log(token);
 
-      var user = result.user;
+      var user = res.user;
 
       let html = `
       <p>Nombre: ${user.displayName}</p>
