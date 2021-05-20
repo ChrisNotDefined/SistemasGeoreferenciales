@@ -122,7 +122,7 @@ const loginGoogle = () => {
       let html = `
       <p>Nombre: ${user.displayName}</p>
       <p>Correo: ${user.email}</p>
-      <img src="${user.photoUrl}">
+      <img src="${user.photoURL}">
     `;
 
       accountData.innerHTML = html;
