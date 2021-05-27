@@ -84,4 +84,8 @@ const routes = [
     name: "Práctica 21 - Firebase Authentication",
     route: "./pract20/index.html",
   },
+  {
+    name: "Práctica 22 - Encontrar cercanos",
+    route: "./pract21/index.html",
+  },
 ];

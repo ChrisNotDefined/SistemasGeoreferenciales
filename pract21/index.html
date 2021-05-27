@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amigos</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.svg"
+      type="image/x-icon"
+    />
+
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand align-items-center" href="#">
+          <img class="navbar-image" src="./img/conejo.svg" />
+          AMIGOS
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item logged-in">
+              <a
+                class="nav-link"
+                href="#"
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#accountModal"
+                >Mi Cuenta</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link logged-in" id="btnLogout">Salir</a>
+            </li>
+            <li class="nav-item logged-out">
+              <a
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+                >Ingresar</a
+              >
+            </li>
+            <li class="nav-item logged-out">
+              <a
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+                >Registro</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal Login -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <label class="form-label" for="email">Correo electrónico: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="email"
+                type="email"
+                id="txtCorreo"
+                placeholder="michael@email.com"
+              />
+              <label class="form-label" for="email">Contraseña: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="password"
+                type="password"
+                id="txtPassword"
+                placeholder="Ingresa tu contraseña"
+              />
+              <button class="btn btn-primary w-100">Iniciar Sesión</button>
+              <p class="error"></p>
+            </form>
+            <button class="btn btn-success w-100" onclick="loginGoogle()">
+              Entrar Con Google
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Register -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Registrarse</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="registerForm">
+              <label class="form-label" for="email">Nombre: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="name"
+                type="text"
+                id="txtRName"
+                placeholder="Michael Jordan"
+              />
+              <label class="form-label" for="email">Teléfono: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="name"
+                type="tel"
+                id="txtRTel"
+                placeholder="477 123 4565"
+              />
+              <label class="form-label" for="email">Correo electrónico: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="email"
+                type="email"
+                id="txtRCorreo"
+                placeholder="michael@email.com"
+              />
+              <label class="form-label" for="email">Contraseña: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="password"
+                type="password"
+                id="txtRPassword"
+                placeholder="Ingresa tu contraseña"
+              />
+              <label class="form-label" for="email">Repetir contraseña: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="password"
+                type="password"
+                id="txtRRepeatPassword"
+                placeholder="Ingresa tu contraseña"
+              />
+              <label class="form-label" for="dir">Dirección: </label>
+              <input
+                required
+                class="form-control mb-2"
+                name="dir"
+                type="text"
+                id="txtRDir"
+                placeholder="Av. Calle 123 Col Colonia Ciudad Pais"
+              />
+              <button class="btn btn-primary w-100">Registrarse</button>
+              <p class="error"></p>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Account -->
+    <div
+      class="modal fade"
+      id="accountModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Registrarse</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body account-data">Info de la cuenta</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container logged-in p-5">
+      <div class="row" id="map">AQUI VA EL MAPA</div>
+    </div>
+
+    <!-- Google Maps -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlAfjkEyZc3T2vLRARL5f4QYJj3ZPai6Q&libraries=places&callback=iniciaMapa&region=JP"
+      async
+      defer
+    ></script>
+    
+    <!-- Bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+    <script src="js/firebaseConfig.js"></script>
+
+    <!-- Local Script -->
+    <script src="js/authentication.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
