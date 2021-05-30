@@ -1,0 +1,54 @@
+:root {
+  --primary: #3fbbaa;
+  --accent: #002642;
+  --danger: #c21010;
+  --light: #FFF;
+  --dark: #02040f;
+}
+
+#map {
+  box-sizing: border-box;
+  height: max(50vh, calc(100vw * 0.42));
+  border-radius: 1em;
+}
+
+html,
+body {
+  background-color: var(--primary);
+}
+
+ul {
+  margin-top: 1em;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  color: black;
+  overflow-y: auto;
+  flex: 1;
+}
+
+h1 {
+  color: var(--light);
+}
+
+li {
+  margin: 0 1em;
+  margin-top: 0.5em;
+  background-color: #fff;
+  padding: 0.2em 1em;
+  border-radius: 0.2em;
+}
+
+li:last-child {
+  margin-bottom: 1em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.places-list {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}

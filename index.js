@@ -88,4 +88,8 @@ const routes = [
     name: "Práctica 22 - Encontrar cercanos",
     route: "./pract21/index.html",
   },
+  {
+    name: "Práctica 23 - Google Places",
+    route: "./pract22/index.html",
+  },
 ];
