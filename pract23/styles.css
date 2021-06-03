@@ -1,0 +1,54 @@
+html, body {
+  background-color: khaki;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.slider {
+  position: relative;
+}
+
+.slide {
+  display: none;
+  opacity: 0;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.slide.active {
+  display: flex;
+  animation: appear 400ms;
+  animation-fill-mode: forwards;
+}
+
+.slide.hiding {
+  display: flex;
+  animation: disappear 400ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#map,
+#map2 {
+  height: max(50vh, 50vw);
+}

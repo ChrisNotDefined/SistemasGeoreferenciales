@@ -92,4 +92,8 @@ const routes = [
     name: "Práctica 23 - Google Places",
     route: "./pract22/index.html",
   },
+  {
+    name: "Práctica 24 - Geocoding",
+    route: "./pract23/index.html",
+  },
 ];
